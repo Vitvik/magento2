@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add
+                id="Vitvik_Testimonials::customer_testimonials"
+                title="Customer testimonials" module="Vitvik_Testimonials"
+                sortOrder="51"
+                resource="Magento_Backend::content"/>
+        <add
+                id="Vitvik_Testimonials::testimonials"
+                title="Testimonials"
+                module="Vitvik_Testimonials"
+                sortOrder="10"
+                action="vitvik/testimonials/index"
+                resource="Magento_Backend::content"
+                parent="Vitvik_Testimonials::customer_testimonials"/>
+        <add
+                id="Vitvik_Testimonials::testimonials_configuration"
+                title="Configuration"
+                module="Vitvik_Testimonials"
+                sortOrder="99"
+                parent="Vitvik_Testimonials::customer_testimonials"
+                action="adminhtml/system_config/edit/section/customer_testimonials"
+                resource="Magento_Backend::content" />
+    </menu>
+</config>
