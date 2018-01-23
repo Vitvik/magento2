@@ -1,0 +1,19 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="top.links">
+            <block class="Magento\Framework\View\Element\Html\Link" name="testimonials.link" after="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="false">Testimonials</argument>
+                    <argument name="path" xsi:type="string" translate="false">testimonials</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="logo">
+            <arguments>
+                <argument name="logo_file" xsi:type="string">images/my_logo.png</argument>
+                <argument name="logo_img_width" xsi:type="number">166</argument>
+                <argument name="logo_img_height" xsi:type="number">131</argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

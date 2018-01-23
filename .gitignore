@@ -1,0 +1,10 @@
+
+/.idea
+/code/Magento
+/design/*/Magento
+/etc
+/i18n/magento
+autoload.php
+bootstrap.php
+functions.php
+.htaccess
