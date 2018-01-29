@@ -37,7 +37,7 @@ class Index extends \Magento\Framework\App\Action\Action
                     try {
                         $this->messageManager->addSuccess(__('Successfull Message'));
                         $resultRedirect = $this->resultRedirectFactory->create();
-                        $resultRedirect->setRefererOrBaseUrl();
+                        $resultRedirect->setPath('testimonials');
                         return $resultRedirect;
 
                     } catch (\Exception $e) {
@@ -47,13 +47,14 @@ class Index extends \Magento\Framework\App\Action\Action
                         return $resultRedirect;
                     }
                 endif;
+            return $resultPage = $this->_resultPageFactory->create();
 
-            $resultPage = $this->_resultPageFactory->create();
-            return $resultPage;
+            else:
+                $this->messageManager->addError(__('If you want write testimonial you need creating an account or if you have an account, sign in with your email address.'));
+                $resultRedirect = $this->resultRedirectFactory->create();
+                $resultRedirect->setPath('customer/account/login');
+                return $resultRedirect;
 
-            else:  echo('Error Message.'); //to do error page with link on registry or sign in
         endif;
-
-
     }
 }

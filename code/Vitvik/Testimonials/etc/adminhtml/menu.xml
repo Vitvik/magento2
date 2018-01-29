@@ -5,22 +5,16 @@
                 id="Vitvik_Testimonials::customer_testimonials"
                 title="Customer testimonials" module="Vitvik_Testimonials"
                 sortOrder="51"
-                resource="Magento_Backend::content"/>
+                resource="Magento_Backend::admin"
+        />
         <add
                 id="Vitvik_Testimonials::testimonials"
                 title="Testimonials"
                 module="Vitvik_Testimonials"
-                sortOrder="10"
-                action="vitvik/testimonials/index"
-                resource="Magento_Backend::content"
-                parent="Vitvik_Testimonials::customer_testimonials"/>
-        <add
-                id="Vitvik_Testimonials::testimonials_configuration"
-                title="Configuration"
-                module="Vitvik_Testimonials"
-                sortOrder="99"
+                sortOrder="1"
                 parent="Vitvik_Testimonials::customer_testimonials"
-                action="adminhtml/system_config/edit/section/customer_testimonials"
-                resource="Magento_Backend::content" />
+                action="testimonials/testimonials"
+                resource="Magento_Backend::admin"
+        />
     </menu>
 </config>

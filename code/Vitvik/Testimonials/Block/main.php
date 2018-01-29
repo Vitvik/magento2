@@ -11,10 +11,11 @@ class Main extends \Magento\Framework\View\Element\Template
         $this->toDoFactory = $toDoFactory;
         parent::__construct($context);
     }
-
+/*
     function _prepareLayout()
     {
         return '/vitvik/testimonials/index';
 
     }
+*/
 }
